@@ -30,4 +30,4 @@ task reportResources(type: Copy) {
 }
 sourceSets.main.output.dir generatedResourcesDir, builtBy: reportResources
 
-useTestFixtures()
+testFixtures.from(':core')

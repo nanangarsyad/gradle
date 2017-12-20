@@ -12,4 +12,4 @@ dependencies {
     implementation libraries.kryo
 }
 
-useTestFixtures()
+testFixtures.from(':core')

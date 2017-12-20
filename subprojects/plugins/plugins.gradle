@@ -61,13 +61,14 @@ task wrapperJar(type: Copy) {
 }
 sourceSets.main.output.dir wrapperJarDir, builtBy: wrapperJar
 
-useTestFixtures()
-useTestFixtures(sourceSet: "testFixtures")
-useTestFixtures(project: ":dependencyManagement")
-useTestFixtures(project: ":languageJava")
-useTestFixtures(project: ":languageGroovy")
-useTestFixtures(project: ':diagnostics')
-
+testFixtures {
+    from(':core')
+    from(':core', 'testFixtures')
+    from(':dependencyManagement')
+    from(':languageJava')
+    from(':languageGroovy')
+    from(':diagnostics')
+}
 
 verifyTestFilesCleanup.errorWhenNotEmpty = false
 

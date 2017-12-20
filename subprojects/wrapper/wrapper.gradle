@@ -57,4 +57,4 @@ integTestTasks.all {
     requiresBinZip = true
 }
 
-useTestFixtures()
+testFixtures.from(':core')

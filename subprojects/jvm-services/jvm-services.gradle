@@ -13,4 +13,4 @@ dependencies {
     api project(":processServices")
 }
 
-useTestFixtures()
+testFixtures.from(':core')

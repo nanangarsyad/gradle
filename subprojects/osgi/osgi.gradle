@@ -24,4 +24,4 @@ dependencies {
     compile libraries.bndlib
 }
 
-useTestFixtures()
+testFixtures.from(':core')

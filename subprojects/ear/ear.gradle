@@ -20,4 +20,4 @@ dependencies {
     compile libraries.inject
 }
 
-useTestFixtures()
+testFixtures.from(':core')

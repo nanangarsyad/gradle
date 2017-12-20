@@ -2,7 +2,7 @@ plugins {
     id 'classycle'
 }
 
-useTestFixtures()
+testFixtures.from(':core')
 
 dependencies {
     testFixturesCompile project(':internalIntegTesting')

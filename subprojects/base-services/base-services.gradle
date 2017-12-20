@@ -36,4 +36,4 @@ task buildReceiptResource(type: Copy) {
 }
 sourceSets.main.output.dir generatedTestResourcesDir, builtBy: buildReceiptResource
 
-useTestFixtures()
+testFixtures.from(':core')

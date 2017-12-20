@@ -13,8 +13,9 @@ task crossVersionTests(type: org.gradle.testing.IntegrationTest) {
     systemProperties['org.gradle.integtest.executer'] = 'forking'
 }
 
+testFixtures.from(':core')
+
 strictCompile()
-useTestFixtures()
 
 verifyTestFilesCleanup.errorWhenNotEmpty = false
 

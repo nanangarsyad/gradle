@@ -29,5 +29,6 @@ dependencies {
     implementation libraries.commons_lang
 }
 
-useTestFixtures()
+testFixtures.from(':core')
+
 strictCompile()
